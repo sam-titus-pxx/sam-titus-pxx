@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/font-styles.css"/>
+  <link rel="stylesheet" href="styles/w3css.css"/>
+  <link rel="stylesheet" href="styles/FA5/fa5/css/all.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
+  
+  <meta name="keywords" content="pure water company, bottle water, pure water manufacturer, mac-blue zeal global, mac blue zeal global, mac blue table water, mac blur zeal table water"/>
+  <meta name="description" content="Welcome to the homepage of Mac-Blue Zeal Global Resources. A top notch quality water bottling and packaging privately owned company based in Uyo, Akwa Ibom State, Nigeria. Place your orders now.">
+   
+   <title>Mac-Blue Web Page</title>
+</head>
+<body class="">
+  
+  
+  	<div id="post-view-page" style="height:fit-content;width:100vw;display:none;padding:0;z-index:5;" class="w3-white w3-container w3-card-4 w3-animate-opacity">
+ </div>						
+			<div id="image-view-page" style="height:fit-content;width:100vw;display:none;padding:0;" class="w3-animate-zoom w3-white w3-container w3-card-4">
+ </div>						
+  
+  <!-- =============PURCHASE CONFIRMATION MODALS================ -->
+  
+  <div id="purchase-confirm-modal" style="display:none;z-index:5;padding:5px;" class="w3-modal w3-grey">
+         
+    <div style="top:5%;" class="w3-container w3-modal-content w3-white w3-round-xlarge">
+      <div style="height:fit-content;" class="w3-section ">
+        <h1 class="bold underline w3-section MBZ"> Confirm Purchase </h1>
+        <p>Purchase Item: <span id="purchase-confirm-item" class="w3-large bold"></span></p>
+        <p>Amount: <span id="purchase-confirm-amount" class="bold"></span></p>
+        <p>Item Price: N<span id="purchase-confirm-price" class="bold"></span></p>
+        <p class="w3-right w3-xlarge">Total: N<span id="purchase-confirm-total" class="bold"</p>
+          <div class="w3-panel w3-topbar w3-center ">
+             <span id="btn-purchase-confirm" style="width:80%;" class="w3-margin w3-btn w3-border w3-round-xxlarge MBZ-bg w3-large w3-card-4"><span class="w3-text-green fas fa-check-circle"></span> Confirm</span>
+             <span id="btn-purchase-cancel" class=" w3-btn w3-border w3-round-xlarge fas fa-times-circle w3-medium w3-card-4"> Cancel</span><br>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="purchase-page-modal" style="display:none;z-index:5;padding:5px;" class="w3-modal w3-container w3-grey">
+    <div style="top:5%;" class="w3-container w3-modal-content w3-white w3-round-xlarge ">
+     
+      <div style="height:fit-content;" class="w3-section w3-container  w3-round-xlarge ">
+        <h1 class="w3-xlarge underline bold"><span id="purchase-modal-title"></span></h1>
+        <div style="height:150px;width100vw;" class="w3-bottombar">
+          <img id="purchase-modal-image" src="" style="height:100%;width:100%;">
+        </div>
+        <div class="bold ">
+          <p>Stock: <span id="purchase-modal-stock"></span></p>
+          <p>Price: N<span id="purchase-modal-price"></span></p>
+          <p>Amount: <span id="purchase-modal-amount"></span> 
+            <button id="btn-increment-amount" class="w3-btn w3-right fas fa-plus w3-border w3-medium MBZ"></button>
+            <button id="btn-decrement-amount" class="w3-btn w3-right fas fa-minus w3-border w3-medium MBZ"></button>
+          </p>
+
+          <p class="w3-topbar">Total: N<span id="purchase-modal-cost"></span></p>
+          <span id="purchase-modal-alert" style="display:none;" class="w3-text-red w3-tiny bold w3-center">Item Inventory Exceeded !</span>
+        </div>
+      </div>
+      <button type="button" onclick="HE('purchase-page-modal')" id="btn-purchase-modal-purchase" class=" w3-btn w3-medium w3-left franklin w3-border fas fa-cart-plus w3-round-xxlarge MBZ-bg w3-card-4"> Purchase</button>
+      <button type="button" onclick="HE('purchase-page-modal')" id="btn-purchase-modal-display" class=" w3-btn w3-medium w3-right franklin fas fa-times-circle w3-border w3-round-xxlarge w3-card-4"> Cancel</button>
+      <br>
+    </div>
+  </div>
+  
+  
+  <div id="page-modal" style="display:none;" class="w3-modal w3-grey">
+     <button type="button" id="btn-modal-display" class=" w3-btn fas fa-times-circle w3-large w3-right"></button>
+    
+    <div class="w3-modal-content w3-white w3-round-xlarge">
+      <div style="height:fit-content;" class="w3-section pd-lg w3-display-container  w3-round-xlarge w3-border w3-card">
+      <div class="w3-bottombar "><span class=" w3-xlarge bold josefinB underline">NOTICE !</span></div>
+      <div id="data-box-ministrations" style="padding:2px;margin:0;height:200px;" class="w3-container"></div>
+      <a href="www.google.com"><span id="btn-view-more-teachings" style="padding:10px;" class="btn-view-more w3-btn w3-medium w3-text-blue w3-display-bottomright bold underline">view more <i class="fas fa-arrow-right"></i></span></a>
+    </div>
+    </div>
+  </div>
+    
+    
+  <div style="display:none;" id="sidebar-hoist-area">
+    <div style="display:block;padding-right:0;" id="sidebar" class="w3-sidebar w3-border-blue MBZ-grad w3-bar-block w3-rightbar header">
+    <span onclick="closeSidebar()" class="w3-text-white w3-margin w3-right w3-xlarge fas fa-times-circle"></span>
+
+   <div style="margin:0;padding:0;height:100px;" class="w3-panel w3-section">
+    <!-- <img src="assets/logos/uniuyo2.jpg" height="100%" width="100%"> -->
+    <span class="w3-bar-item w3-medium w3-text-white bold josefinB w3-bottombar">
+     MAC-BLUE ZEAL<br>GLOBAL RESOURCES.
+    </span>
+   </div>
+
+    <ul style="padding:0;padding-left:5px;margin-top:40%;" class="w3-ul w3-bar-item oregonB w3-text-white">
+      <li class="list-item">
+       <button data-link-type="about" style="width:100%;" class="side-link-btn w3-button">ABOUT US</button>
+      </li> 
+     <li class="list-item">
+       <button data-link-type="contact" style="width:100%;" class="side-link-btn w3-button">CONTACT US</button>
+      </li>
+      <li class="w3-list-item">
+        <button data-link-type="services" style="width:100%;" class="side-link-btn w3-button">OUR SERVICES</button>
+      </li>
+      <li class="w3-list-item">
+        <button data-link-type="support" style="width:100%;" class="side-link-btn w3-button">SUPPORT US</button>
+      </li>
+      <li class="w3-list-item">
+        <button data-link-type="policy" style="width:100%;" class="side-link-btn w3-button">PRIVACY POLICY</button>
+      </li>
+       <li class="w3-list-item">
+        <button id="side-link-testimonials" data-link-type="none" style="width:100%;" class="side-link w3-button">TESTIMONIALS</button>
+      </li>
+      </ul>   
+   </div>
+  </div>
+
+    
+    <div style="margin:0;padding:5px;" class="w3-container w3-cell-row w3-bottombar">
+    <div class="w3-container w3-cell w3-border w3-card">
+      <h1 class="w3-xlarge franklin bold ">MAC-BLUE ZEAL GLOBAL    <span class="w3-tiny w3-right bold">...Quality Redefined</span></h1>
+    </div>
+    <div class="w3-container w3-padding w3-cell">
+      <span onclick="openSidebar();" class="w3-btn w3-xxlarge fas fa-bars"></span>
+    </div>
+  </div>
+    
+   <div style="width:98%;" class="w3-container w3-section w3-cell-row">
+    <div class="w3-cell">
+      <div style="width:80px;height:30px;" class="w3-round pd-sm w3-card w3-blue"><span class="w3-xlarge fab fa-facebook"><span class="w3-tiny bold">MBZ_Global</span></span></div>
+    </div>
+    
+    <div class="w3-cell">
+      <div style="width:80px;height:30px;" class="w3-round pd-sm w3-card w3-black"><span class="w3-xlarge fab fa-twitter"><span class="w3-tiny bold">MBZ_Global</span></span></div>
+    </div>
+  
+  <div class="w3-cell">
+      <div style="width:80px;height:30px;" class="w3-round pd-sm w3-card w3-deep-blue"><span class="w3-xlarge fab fa-linkedin"><span class="w3-tiny bold">MBZ_Global</span></span></div>
+    </div>
+  
+</div> 
+  
+  
+  <div id="main-body" class="w3-container" style="margin:0;padding:0;padding-top:2px;">
+    
+    <br©></br>
+    
+    <div style="height:fit-content;padding-top:10px;" class="w3-section w3-round-xlarge w3-black w3-border w3-panel pd-bg mg-sm w3-card-4 w3-center">
+      <div class="">
+        <span class="w3-xlarge w3-text-amber fas fa-star"></span>
+        <span class="w3-xxlarge w3-text-amber fas fa-star"></span>
+        <span class="w3-xlarge w3-text-amber fas fa-star"></span>
+      </div>
+      <h1 class="w3-bottombar bold portland">C.A.C CERTIFIED<sup class="w3-text-blue fas fa-check-circle"></sup> </h1>
+      <h1 class="bold w3-small">Ref ID: 532892</h1>
+    </div>
+    
+    
+    
+    
+      <div style="height:fit-content;margin:0;padding:5px;" class="w3-container w3-cell-row w3-bottombar">
+     
+      <h1 style="margin:0;display:none;" class=" w3-xlarge MBZ bold franklin">Mac-Blue Zeal Global Resources<br>
+      <i class="w3-tiny">....To Serve And To Be Of Service</i></h1>
+    </div>
+    <div style="min-height:50px;display:none;"></div>
+    <div class="w3-container w3-section noir" style="height:fit-content;width:100vw;display:none;">
+      <h1 class="w3-padding poppinsB w3-xlarge bold w3-text-white w3-center ">Enjoy<br>24/7 Online Shopping</h1>
+      <div class="w3-container w3-center">
+        <span style="width:80%;" class="w3-btn w3-section w3-large w3-border w3-round-xxlarge w3-amber w3-text-black w3-center bold josefineB w3-card-4">Create An Account</span><br>
+        <span style="width:50%;" class="w3-btn w3-section w3-large w3-border w3-round-xxlarge MBZ-bg w3-text-white w3-center bold josefineB w3-card-4">Login</span>
+
+      </div>
+    </div>
+    
+    <div id="product-page" style="height:100vh;width:100vw;padding:2px;" class="w3-container w3-topbar w3-card-4">
+      <img src="assets/poster3.jpg" height="100%" width="100%">
+    </div>
+    
+     <div style="height:fit-content;" class="w3-section pd-lg w3-display-container  w3-round-xlarge w3-border w3-card">
+      <div class=" "><span class=" w3-xlarge bold josefinB underline"></span></div>
+      <div id="data-box-testimonies" style="padding:2px;margin:0;height:fit-content;" class="w3-container ">
+        <h1 class="w3-large josefin bold"><span class="MBZ bold franklin">MAC-BLUE ZEAL GLOBAL</span> Is A Privately Owned Production And Marketing Business Firm That Specializes In High-Grade, Reliable, Environment-Friendly Consumer Goods<br>
+          <br>We Are In The Business Of Production, Packaging And Distribution Of Pure-Water Satchets, Bottled Water, And Water Dispensers.</h1>
+      </div>
+     </div>
+    
+    <br>
+    <div id="product-page" style="height:100vh;width:100vw;padding:2px;" class="w3-container w3-card-4">
+      <img src="assets/poster4.jpg" height="100%" width="100%">
+    </div>
+    <br>
+    <div id="product-page" style="height:100vh;width:100vw;padding:2px;" class="w3-container w3-section w3-card-4">
+      <img src="assets/poster7.jpg" height="100%" width="100%">
+    </div>
+    <br>
+    <div id="product-page" style="height:100vh;width:100vw;padding:2px;" class="w3-container w3-card-4">
+      <img src="assets/poster.jpg" height="100%" width="100%">
+    </div>
+    <br>
+  
+    <!-- ========================================== ->
+    
+  <br><br>
+  <div id="market-page" style="display:none;height:fit-content;width:100vw;padding:2px;" class="w3-container w3-card">
+    
+    <div class="w3-panel w3-section MBZ-bg">
+      <h1 class="w3-large w3-right josefinB bold">SHELF 1</h1>
+    </div>
+    <div id="" style="height:fit-content;" class="w3-margin w3-section pd-sm w3-display-container  w3-round-xlarge w3-border w3-card-4">
+      <div id="slider1" style="height:fit-content;margin:0;" class="w3-container slider1"></div>
+    </div>
+    <br>
+    
+   <div class="w3-panel w3-section MBZ-bg">
+      <h1 class="w3-large w3-right josefinB bold">SHELF 2</h1>
+    </div>
+     <div style="height:fit-content;" class="w3-section pd-lg w3-display-container  w3-round-xlarge w3-border w3-card">
+      <div class="w3-bottombar "><span class=" w3-xlarge bold josefinB MBZ"></span></div>
+      <div id="slider2" style="padding:2px;margin:0;height:fit-content;" class="w3-container slider2"></div>
+     </div>
+    <br>
+    
+    <div class="w3-panel w3-section MBZ-bg">
+      <h1 class="w3-large w3-right josefinB bold">SHELF 3</h1>
+    </div>    
+     <div style="height:fit-content;" class="w3-section pd-lg w3-display-container  w3-round-xlarge w3-border w3-card">
+      <div class="w3-bottombar "><span class=" w3-xlarge bold josefinB MBZ"></span></div>
+      <div id="slider3" style="padding:2px;margin:0;height:fit-content;" class="w3-container slider3"></div>
+     </div>
+    <br>
+    
+    <div class="w3-panel w3-section MBZ-bg">
+      <h1 class="w3-large w3-right josefinB bold">SHELF 4</h1>
+    </div>
+     <div style="height:fit-content;" class="w3-section pd-lg w3-display-container  w3-round-xlarge w3-border w3-card">
+      <div class="w3-bottombar "><span class=" w3-xlarge bold josefinB MBZ"></span></div>
+      <div id="slider4" style="padding:2px;margin:0;height:fit-content;" class="w3-container slider4"></div>
+     </div>
+    <br>
+    
+    <div class="w3-panel w3-section MBZ-bg">
+      <h1 class="w3-large w3-right josefinB bold">SHELF 5</h1>
+    </div>
+     <div style="height:fit-content;" class="w3-section pd-lg w3-display-container  w3-round-xlarge w3-border w3-card">
+      <div class="w3-bottombar "><span class=" w3-xlarge bold josefinB MBZ"></span></div>
+      <div id="slider5" style="padding:2px;margin:0;height:fit-content;" class="w3-container slider5"></div>
+     </div>
+    
+  </div>
+  </div>
+    
+    <!-- Modes Switcher Bar -->
+    
+    <div class="w3-container w3-section w3-center w3-border w3-cnter">
+      <button class="w3-btn w3-bar-item w3-text-blue">Product Page</button>
+      |
+      <button class="w3-btn w3-bar-item w3-text-blue">Market Page</button>
+    </div>
+    
+    <!-- ================ -->
+    
+    <br>
+      <div class="MBZ-grad w3-round-small w3-container w3-card-4 w3-topbar" style="height:fit-content;width:100vw;">
+        <h1 class="w3-xlarge w3-text-light-grey josefinB">Our Services</h1>
+        <p id="services-list" class="w3-bar"></p>
+      </div>
+    
+    
+    <div id="product-page" style="height:100vh;width:100vw;padding:2px;" class="w3-container w3-card-4">
+      <img src="assets/poster5.jpg" height="100%" width="100%">
+    </div>
+    <br><br>
+    <div id="product-page" style="height:100vh;width:100vw;padding:2px;" class="w3-container w3-card-4">
+      <img src="assets/poster6.jpg" height="100%" width="100%">
+    </div>
+    
+  <div id="pdf-view" class="w3-container"></div>
+    <br>
+  <!-- Footer Board -->
+  <div style="margin:0;padding:5px;" class="a3-section w3-container MBZ-grad w3-text-white">
+      <img class="w3-right " src="assets/logo-white.png" height="100px" width="100px" sizes="100%">
+
+    <h1 class="w3-xlarge bold josefinB w3-center w3-text-amber underline">Mac-Blue Zeal Global</h1>
+    <div class="w3-container  w3-bottombar">
+      <ul class="w3-ul bold">
+        <li><span data-link-type="support" id="footer-activities" class="w3-btn side-link-btn">Support Us &nbsp<i class="fas fa-cogs"></i></span></li>
+        <li><span data-link-type="about" class="w3-btn side-link-btn">About Us &nbsp<i class="fas fa-question-circle"></i></span></li>
+        <li><span data-link-type="contact" class="w3-btn side-link-btn">Contact Us &nbsp<i class="fas fa-phone"></i></span></li>
+        <li><span data-link-type="policy" class="w3-btn side-link-btn">Company Policy &nbsp<i class="fas fa-file"></i></span></li>
+        
+      </ul>
+    </div>
+    
+    <div class="w3-bar-block w3-xxlarge">
+      <span class="fab fa-facebook w3-bar-item">&nbsp<a href="#" class="w3-medium"> MBZ Facebook Group</a></span>
+      <span class="fab fa-whatsapp w3-bar-item">&nbsp<a href="#" class="w3-medium"> MBZ Whatsapp Platform</a></span>
+      <span class="fab fa-telegram w3-bar-item">&nbsp<a href="#" class="w3-medium"> MBZ Telegram Page</a></span>
+      <span class="fab fa-twitter w3-bar-item">&nbsp<a href="#" class="w3-medium"> MBZ Twitter Handle</a></span>
+    </div>
+  </div>
+    <div class="w3-container w3-padding-24 w3-black">
+      <h1 class="w3-tiny bold w3-center" style="margin:0;">MAC-BLUE ZEAL GLOBAL RESOURCES ™ 2024©</h1>
+    </div>
+</body>
+  
+
+<!--<script src="babel.js"></script>-->
+  <script src="scripts/jquery.js"></script>
+<script src="scripts/slick.js"></script>
+  <script type="" src="scripts/lib.js"></script>
+  <script type="" src="scripts/MBZ.js"></script>
+<script type="">
+  $(document).ready(function(){
+    
+    //loadProducts(0,"slider1");
+    //$("#pdf-view").load("scripts/files/services.txt");
+    
+   
+ 
+    
+  });
+//////////////////////////////////////////////////////////////////////
+//Functions to handle copying of text to clipboard(tested and working)
+function handleCopy(id) {
+  const area = getElem(id)
+  area.select();
+  document.execCommand('copy')
+}
+
+function triggerCopy(id) {
+  const element = getElem(id);
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+}
+
+/////////////////////////////////////////////////////////////////
+
+</script>
+
+</html>
