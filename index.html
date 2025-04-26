@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/font-styles.css"/>
+  <link rel="stylesheet" href="styles/w3css.css"/>
+  <link rel="stylesheet" href="styles/FA5/fa5/css/all.css"/>
+  <title>Reference Web Page</title>
+</head>
+<body class="w3-light-grey" style="background-image:url('assets/bg2.jpg')">
+  
+  <div style="display:none;" class="w3-modal w3-grey">
+    <div class="w3-modal-content w3-white w3-border-black w3-bottombar w3-topbar w3-leftbar">
+      <div class="w3-container ">
+        <h1 class="w3-xlarge">Modal</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div id="main-container" style="height:100vh;width:100vw;" class="w3-container">
+    
+      <h1 class="w3-medium w3-center w3-text-white underline"> Match The Draw Values Before Time Runs Out!!</h1>
+
+    
+    <h1 class="w3-xlarge ">
+      <span id="score-points" class="w3-xxlarge bold w3-text-amber">000</span><br>
+      <span id="token-count" class="bold w3-text-white">0</span>
+    </h1>
+  
+    <div id="activity-area" class="w3-container w3-display-middle">
+      <br>
+      <!-- Timer Progress Bar -->
+      <div id="progess-bar" style="width:200px;height:15px;" class="w3-small w3-border w3-round w3-center w3-section">
+        <div id="timer-progress" style="width:100%;height:100%;" class="w3-green bold w3-center">100%</div>
+      </div>
+      
+      <span class="fa-stack fa-8x">
+        <i class="fas fa-circle fa-stack-2x fa-4x w3-text-black"></i>
+        <i style="" id="big-button" class=" fas fa-circle fa-stack-1x w3-text-amber"></i>
+      </span>
+      
+      <div class="w3-left">
+        <div class="w3-bar w3-text-white">
+          <div style="height:30px;width:30px;padding:5px;" class="w3-border w3-center bold w3-bar-item"><span id="draw-value-1" class="w3-large">0</span></div>
+          <div style="height:30px;width:30px;padding:5px;" class="w3-border w3-center bold w3-bar-item"><span id="draw-value-2" class="w3-large">0</span></div>
+          <div style="height:30px;width:30px;padding:5px;" class="w3-border w3-center bold w3-bar-item"><span id="draw-value-3" class="w3-large">0</span></div>
+          <div style="height:30px;width:30px;padding:5px;" class="w3-border w3-center bold w3-bar-item"><span id="draw-value-4" class="w3-large">0</span></div>
+         </div>
+        </div>
+      
+      <div class="w3-right">
+        <div class="w3-bar w3-text-white">
+        <div style="height:30px;width:30px;padding:5px;" class="w3-border w3-center bold w3-bar-item"><span id="draw-match-1" class="w3-large">-</span></div>
+        <div style="height:30px;width:30px;padding:5px;" class="w3-border w3-center bold w3-bar-item"><span id="draw-match-2" class="w3-large">-</span></div>
+        <div style="height:30px;width:30px;padding:5px;" class="w3-border w3-center bold w3-bar-item"><span id="draw-match-3" class="w3-large">-</span></div>
+        <div style="height:30px;width:30px;padding:5px;" class="w3-border w3-center bold w3-bar-item"><span id="draw-match-4" class="w3-large">-</span></div>
+      </div>
+      </div>
+      
+      
+    </div>
+    
+ </div>
+  
+  <div class="w3-container w3-black bold w3-small ">
+    <h1 class="w3-right w3-small bold">Copyright - Fatherly P. Titus© 2025</h1>
+  </div>
+ 
+</body>
+  
+  <script src="scripts/JQuery.js"></script>
+  <script src="scripts/lib.js"></script>
+
+<script>
+
+    var GAME_ENDED = false;
+    var timer_bar = GQ("#main-container #activity-area #timer-progress");
+    var timer_clock = null, bar = 100;
+    var reduction_rates = [1100,1000,800,500], reduction_rate = 1200; 
+
+
+    var DRAW_VALUES = [0,0,0,0]
+    var DRAW_VALUES_P = [0,0,0,0]
+    var current_draw_matching = 0;
+
+
+  $(document).ready(()=>{
+    
+    var tap_count = 0;
+    var token_count = 0;
+    
+    crrnt_color = "amber";
+    color_index = 3
+    
+    colors = ["red","blue","green","amber","purple"]
+    
+    
+    getElem("big-button").addEventListener("click",()=>{
+      
+      if(!GAME_ENDED){
+      color_index = ((color_index+1) > 4)? 0 : color_index+1;
+      crrnt_color = colors[color_index];
+      
+      cList = getElem("big-button").classList;
+      //console.log(cList);
+      
+      color = cList.item(cList.length-1)
+      
+      cList.replace(color,"w3-text-"+crrnt_color);
+      
+      rnd_val = Math.floor(Math.random()*20)
+      
+      tap_count += rnd_val;
+      if(tap_count >= 100){
+        token_count += 1; 
+        getElem("token-count").innerText = token_count;
+        getElem("score-points").innerText = "000"
+        tap_count = 0;
+      }else{
+        getElem("score-points").innerText = tap_count;
+      }
+      
+      if(token_count == DRAW_VALUES[current_draw_matching]){
+        DRAW_VALUES_P[current_draw_matching] = token_count;
+        getElem("token-count").innerText = 0;
+        getElem("score-points").innerText = "000"
+        getElem("draw-match-"+(current_draw_matching+1)).innerText = token_count
+        tap_count = 0;
+        token_count = 0;
+        //alert(`DRAW MATCH MADE - INDEX: ${current_draw_matching}!`)
+        if(current_draw_matching == 3){
+          alert("SUCCESS!!"); 
+          killTimer();
+        }else
+        current_draw_matching += 1;
+      }
+      }
+    });
+    
+    
+    setTimer()
+    setDrawValues()
+    
+  });
+
+
+
+//////////////////////////////////////////////////////////////////////
+function setDrawValues(){
+  
+  for(i = 0; i < 4; i++){
+      val = Math.floor(Math.random()*9)+1  
+      DRAW_VALUES[i] = val 
+      getElem("draw-value-"+(i+1)).innerText = val;
+  }
+    console.warn("DRAW VALUES SET!")
+}
+
+
+function setTimer(){
+  time_set = Math.floor(Math.random()*5);
+  time_val = 100
+  console.error(time_set)
+  if(time_set >= 2){
+    //set value lower than 100
+    time_val = Math.floor(Math.random()*95)+5;
+    
+    rd_index= Math.floor(Math.random()*(reduction_rates.length-1))
+    reduction_rate = reduction_rates[rd_index]
+    console.warn("REDUCTION RATE: "+reduction_rate);
+  }
+  
+  timer_bar.style.width = time_val+"%";
+  timer_bar.innerText = time_val+"%";
+  console.warn("TIMER SET!");
+  
+  bar = time_val;
+  
+  timer_clock = setInterval(function(){
+      console.log("Clock Running....\nBar: "+bar)
+      timer_bar.style.width = bar+"%";
+      timer_bar.innerText = bar+"%";
+      
+      bar -= 1;
+      if(bar <= 0){
+        clearInterval(timer_clock);
+        timer_clock = null; 
+        console.error("END!!")
+        alert("END!")
+        
+      }
+    },reduction_rate);
+  
+}
+
+function killTimer(){
+   clearInterval(timer_clock);
+   timer_clock = null; 
+   console.error("TIMER STOPPED!!")
+}
+
+
+//Functions to handle copying of text to clipboard(tested and working)
+function handleCopy(id) {
+  const area = getElem(id)
+  area.select();
+  document.execCommand('copy')
+}
+
+function triggerCopy(id) {
+  const element = getElem(id);
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+}
+
+/////////////////////////////////////////////////////////////////
+
+</script>
+
+</html>

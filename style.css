@@ -1,0 +1,338 @@
+
+.MBZ{
+    color: #0A175D;
+}
+.MBZ-bg{
+    color:white!important;
+    background: #0A175D!important;
+    background-color: #0A175D!important;
+}
+.MBZ-grad{
+ background-image: linear-gradient(to right,#0575e6,#021b79);
+}
+.MBZ-grad2{
+ background-image: linear-gradient(to right,#98ff95,#021b79);
+}
+.sanguin{
+    background-image: linear-gradient(to bottom right,#D4145A,#FBB03B);
+  }
+.purple-lake{
+    background-image: linear-gradient(to top right,#662D8C,#ED1E79);
+  }
+.kashmir{
+    background-image: linear-gradient(to top right,#614385,#516395);
+  }
+.bloody-mary{
+    background-image: linear-gradient(to top right,#FF512F,#DD2476);
+  }
+.morning{
+    background-image: linear-gradient(to top right,#FF5F6D,#FFC371);
+   }
+.exotic{
+    background-image: linear-gradient(to top right,#FF61D2,#FE9090);
+   }
+.orbit{
+    background-image: linear-gradient(to top right,#4E65FF,#92EFFD);
+   }
+.celestial{
+    background-image: linear-gradient(to top right,#C33764,#1D2671);
+   }
+.mirror{
+    background-image: linear-gradient(to top right,#93A5CF,#E4EfE9);
+   }
+.eternal{
+    background-image: linear-gradient(to top right,#09203F,#537895);
+   }
+.plum{
+    background-image: linear-gradient(to top right,#764BA2,#667EEA);
+   }
+.noir{
+    background-image: linear-gradient(to top right,#4b6cb7,#182848);
+   }
+.influenza{
+    background-image: linear-gradient(to left,#c04848,#480048);
+   }
+.titanium{
+    background-image: linear-gradient(to top right,#283048,#859398);
+   }
+.steel{
+    background-image: linear-gradient(to top right,#1f1c2c,#928dab);
+   }
+
+.expresso{
+ background-image: linear-gradient(to right,#ad5389,#3c1053);
+}
+.lust{
+ background-image: linear-gradient(to right,#333333,#dd1818);
+}
+.moon-purple{
+ background-image: linear-gradient(to right,#4e54c8,#8f94fb);
+}
+.red-sunset{
+ background-image: linear-gradient(to right,#355c7d,#6c5b7b,#c06c84);
+}
+.sand-blue{
+ background-image: linear-gradient(to right,#3e5151,#decba4);
+}
+.sublime-light{
+ background-image: linear-gradient(to right,#fc5c7d,#6a82fb);
+}
+.sublime-vivid{
+ background-image: linear-gradient(to right,#fe466b,#3f5efb);
+}
+.bighead{
+ background-image: linear-gradient(to right,#c94b4b,#4b134f);
+}
+.taran-tado{
+ background-image: linear-gradient(to right,#23074d,#cc5333);
+}
+.lawrencium{
+ background-image: linear-gradient(to right,#0f0c29,#302b63,#24243e);
+}
+.selenium{
+ background-image: linear-gradient(to right,#3c3b3f,#605c3c);
+}
+.orange-fun{
+ background-image: linear-gradient(to right,#fc4a1a,#f7b733);
+}
+.argon{
+ background-image: linear-gradient(to right,#03001e,#7303c0,#ec38bc,#fdeff9);
+}
+.hydrogen{
+ background-image: linear-gradient(to right,#667db6,#0082c8,#008228,#667db6);
+}
+.velvet-sun{
+ background-image: linear-gradient(to right,#eleec3,#f05053);
+}
+.yna{
+ background-image: linear-gradient(to right,#1a2a6c,#b21f1f,#fdbb2d);
+}
+.purpink{
+ background-image: linear-gradient(to right,#7f00ff,#e100ff);
+}
+.socialive{
+ background-image: linear-gradient(to right,#06beb6,#48b1bf);
+}
+.crimson-tide{
+ background-image: linear-gradient(to right,#642b73,#c642be);
+}
+.terminal{
+ background-image: linear-gradient(to right,#000000,#0f9b0f);
+}
+.alive{
+ background-image: linear-gradient(to right,#cb356b,#bd3f32);
+}
+.relay{
+ background-image: linear-gradient(to right,#3a1c71,#d76d77,#ffaf7b);
+}
+.meridian{
+ background-image: linear-gradient(to right,#283c86,#45a247);
+}
+.mello{
+ background-image: linear-gradient(to right,#c0392b,#8e44ad);
+}
+.crystal-clear{
+ background-image: linear-gradient(to right,#159957,#155799);
+}
+.grandeur{
+ background-image: linear-gradient(to right,#000046,#1cb5e0);
+}
+.coal{
+ background-image: linear-gradient(to right,#eb5757,#000000);
+}
+.mini{
+ background-image: linear-gradient(to right,#30e8bf,#ff8235);
+}
+.purple-pine{
+ background-image: linear-gradient(to right,#20002c,#cbb4d4);
+}
+.orca{
+ background-image: linear-gradient(to right,#44a081,#093637);
+}
+.liberty-love{
+ background-image: linear-gradient(to right,#200122,#6f0000);
+}
+.blue{
+ background-image: linear-gradient(to right,#0575e6,#021b79);
+}
+.lake{
+ background-image: linear-gradient(to right,#093028,#021b79);
+}
+.dawn{
+ background-image: linear-gradient(to right,#f3904f,#3b4371);
+}
+.purple{
+  background-image: linear-gradient(to right,#41295a,#2f0743);
+}
+
+.fix-bm{
+    position: fixed;
+    top: 60%;
+    bottom: 0%;
+}
+
+.fix-bl{
+ position: fixed;
+ top: 80%;
+ right: 0;
+}
+
+.fix-tl{
+    position: fixed;
+    top: 5%;
+    left: 5%;
+}
+
+.fix-tr{
+    position: fixed;
+    top: 20%;
+    right: 5%;
+}
+
+
+
+.mg-section{
+  margin: 0;
+  margin-bottom: 35px;
+  margin-top: 35px;
+}
+.mg-lg{
+ margin:20px; 
+}
+.mg-bg{
+ margin:15px; 
+}
+.mg-sm{
+  margin: 5px; 
+}
+.mg-tny{
+ marrgin: 2px; 
+}
+.mg-0{
+ margin: 0; 
+}
+  
+.pd-lg{
+ padding: 20px; 
+}
+.pd-bg{
+ padding: 15px; 
+}
+.pd-sm{
+ padding: 5px; 
+}
+.pd-tny{
+ padding: 2px; 
+}
+.pd-0{
+ padding:0; 
+}
+
+.opacity-0{
+  opacity: 1.0;
+  filter: brightness(100%);
+}
+
+.width-100{
+  width:100%;
+}
+
+.height-100{
+  height: 100%;
+}
+
+.width-75{
+width:75%;  
+}
+
+.width-50{
+  width:50%;
+}
+
+.width-25{
+  width:25%;
+}
+
+.width-80{
+  width:80%;
+}
+
+.height-80{
+  height:80%;
+}
+
+
+.height-75{
+  height:75%;
+}
+
+.height-50{
+  height:50%;
+}
+
+.height-25{
+  height:25%;
+}
+
+.art-head{
+ background-color: black;
+ color: white;
+ padding:10px;
+}
+
+.header{
+  font-family: oregonBold;
+  font-weight: bolder;
+}
+
+.text{
+  font-family: josefin;
+  font-weight: bold;
+}
+
+.inp{
+  border: 2px solid black;
+  font-family: oregon;
+  font-weight: bold;
+}
+.bold{
+  font-weight: bolder;
+}
+.underline{
+  text-decoration: underline;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+.box-sm{
+    height:25px;
+    width:25px;
+}
+
+.box-bg{
+    height:50px;
+    width:50px;
+}
+
+.box-lg{
+    height:250px;
+    width:250px;
+}
+
+.box-xlarge{
+    height:350px;
+    width:350px;
+}
+
+.box-full{
+    height:100vh;
+    width:100vw;
+}

@@ -1,0 +1,169 @@
+
+
+    @font-face {
+    font-family: 'Poppins Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Poppins Regular'), url('fonts/Poppins-Regular.woff') format('woff');
+    }    @font-face {
+    font-family: 'Poppins Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Poppins Thin'), url('fonts/Poppins-Thin.woff') format('woff');
+    }    @font-face {
+    font-family: 'Poppins Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Poppins Light'), url('fonts/Poppins-Light.woff') format('woff');
+    }    @font-face {
+    font-family: 'Poppins Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Poppins Medium'), url('fonts/Poppins-Medium.woff') format('woff');
+    }    @font-face {
+    font-family: 'Poppins Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Poppins Bold'), url('fonts/Poppins-Bold.woff') format('woff');
+    }@font-face {
+    font-family: 'Poppins SemiBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Poppins SemiBold'), url('fonts/Poppins-SemiBold.woff') format('woff');
+    }@font-face {
+    font-family: 'Poppins Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Poppins Black'), url('fonts/Poppins-Black.woff') format('woff');
+    }
+
+@font-face{
+  font-family: josefin;
+  src: url(Josefin-Fonts/JosefinSansLight.ttf);
+}
+
+@font-face{
+  font-family: josefinB;
+  src: url(Josefin-Fonts/JosefinSansBold.ttf);
+}
+
+@font-face{
+  font-family: josefinSB;
+  src: url(Josefin-Fonts/JosefinSansSemiBold.ttf);
+}
+
+@font-face{
+  font-family: franklin;
+  src: url(fonts/LibreFranklinBlack.ttf);
+}
+
+@font-face{
+  font-family: franklinB;
+  src: url(fonts/LibreFranklinBold.ttf);
+}
+@font-face{
+  font-family: boldfont;
+  src: url(fonts/boldfont.ttf);
+}
+@font-face{
+  font-family: jersey;
+  src: url(fonts/Jersey.ttf);
+}
+@font-face{
+  font-family: oregon;
+  src: url(fonts/OregonBold.ttf);
+}
+@font-face{
+  font-family: qcksnd;
+  src: url(fonts/QuicksandBkORegular.otf);
+}
+@font-face{
+  font-family: qcksndb;
+  src: url(fonts/QuicksandBRegular.otf);
+}
+@font-face{
+  font-family: roboto;
+  src: url(fonts/RobotoSlabBold.ttf);
+}
+@font-face{
+  font-family: robotoM;
+  src: url(fonts/RobotoSlabMedium.ttf);
+}
+@font-face{
+  font-family: portland;
+  src: url(fonts/Portland.ttf);
+}
+@font-face{
+  font-family: portlandB;
+  src: url(fonts/PortlandBold.ttf);
+}
+
+
+.poppins{
+  font-family: 'Poppins Regular';
+}
+.poppinsT{
+  font-family: 'Poppins Thin';
+}
+.poppinsL{
+  font-family: 'Poppins Light';
+}
+.poppinsM{
+  font-family: 'Poppins Regular';
+}
+.poppinsSB{
+  font-family: 'Poppins SemiBold';
+}
+.poppinsB{
+  font-family: 'Poppins Bold';
+}
+.poppinsBL{
+  font-family: 'Poppins Black';
+}
+
+
+.portlandB{
+  font-family: portlandB;
+}
+.portland{
+  font-family: portland;
+}
+.robotoM{
+  font-family: robotoM;
+}
+.robotoB{
+  font-family: roboto;
+}
+.quicksandBR{
+  font-family: qcksndb;
+}
+.quicksand{
+  font-family: qcksnd;
+}
+.oregon{
+  font-family: oregon;
+}
+.jersey{
+  font-family: jersey;
+}
+.boldfont{
+  font-family: boldfont;
+}
+.josefin{
+  font-family: josefin;
+}
+.josefinB{
+  font-family: josefinB;
+}
+.josefinSB{
+  font-family: josefinSemiBold;
+}
+
+.franklin{
+  font-family: franklin;
+}
+
+.franklin-bold{
+  font-family: franklinB;
+}
+
