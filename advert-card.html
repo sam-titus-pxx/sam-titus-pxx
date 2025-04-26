@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/font-styles.css"/>
+  <link rel="stylesheet" href="styles/w3css.css"/>
+  <link rel="stylesheet" href="styles/FA5/fa5/css/all.css"/>
+  <title>Reference Web Page</title>
+</head>
+<body>
+  <div style="margin:0;padding:5px;" class="w3-container w3-cell-row w3-bottombar">
+    <div class="w3-container w3-cell w3-border w3-card">
+      <h1 class="w3-xxlarge bold ">My Website</h1>
+      <span class="w3-tiny w3-right bold">...Home of inspiration</span>
+    </div>
+    <div class="w3-container w3-padding w3-cell">
+      <span class="w3-btn w3-xxlarge fas fa-bars"></span>
+    </div>
+  </div>
+  
+  <div style="width:98%;" class="w3-container w3-section w3-cell-row">
+    <div class="w3-cell">
+      <div style="width:80px;height:30px;" class="w3-round pd-sm w3-card w3-blue"><span class="w3-xlarge fab fa-facebook"></span></div>
+    </div>
+    
+    <div class="w3-cell">
+      <div style="width:80px;height:30px;" class="w3-round pd-sm w3-card w3-black"><span class="w3-xlarge fab fa-twitter"></span></div>
+    </div>
+  
+  <div class="w3-cell">
+      <div style="width:80px;height:30px;" class="w3-round pd-sm w3-card w3-red"><span class="w3-xlarge fab fa-pinterest"></span></div>
+    </div>
+    
+    <div class="w3-cell">
+      <div style="width:30px;height:30px;" class=""><span class="w3-xlarge fas fa-user-plus"></span></div>
+    </div>
+  
+</div>
+  
+  <!--=============><==================== -->
+  
+  
+  <div style="height:350px;margin:5%;" class="w3-container w3-card-4 w3-border-black w3-topbar w3-bottombar w3-light-grey">
+    
+    <p style="width:fit-content;" class="w3-large pd-sm bold w3-orange">Breaking</p>
+    
+    <h1 class="w3-xxlarge bold franklin underline">Fuel Prices Drop To N200 A Litre</h1>
+    
+    <div class="w3-bar w3-container">
+      <span class="w3-btn pd-bg w3-medium bold w3-border w3-black w3-bar-item">Nigeria</span>
+      <span class="w3-btn pd-bg w3-medium bold w3-border w3-black w3-bar-item">Economy</span>
+      <span class="w3-btn pd-bg w3-medium bold w3-border w3-black w3-bar-item">Business</span>
+      <span class="w3-btn pd-bg w3-medium bold w3-border w3-black w3-bar-item">Society</span>
+    </div>
+    
+    <div class="w3-section">
+      <div>
+        <span class="w3-large fas fa-user-circle"></span><span class="bold">Augustine James</span>
+      </div>
+      <div>
+        <i style=""class="">Writer, Blogger, Author</i><br>
+        <i>10/05/2025</i>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  
+  <h1 class="w3-xxlarge bold underline">How To Create Advert Cards</h1>
+  
+  
+   <!-- ================ADVERTISING BLOCK====================== -->
+  <div style="width:100vw;" class="w3-container w3-border-blue w3-section w3-card-4 w3-topbar w3-bottombar">
+    <div style="min-height:150px;"class="w3-panel w3-light-grey">
+      <a id="ad-image-link" href="index.html"><img id="ad-image" src="assets/ads/phone.jpg" width="100%"></a>
+    </div>
+    <h1 class="w3-large w3-center franklin">Tecno Spark 9 Series<br>
+      <a id="ad-text-link" href="" class="w3-text-blue w3-medium fas fa-globe">  go to link</a>
+      <span class="w3-right fas fa-eye"> 183</span>
+
+    </h1>
+  </div>
+  
+  <br>
+  
+  <!-- ================ADVERTISING BLOCK====================== -->
+  <div style="width:100vw;" class="w3-container w3-border-amber w3-section w3-card-4 w3-topbar w3-bottombar">
+    <div style="min-height:150px;"class="w3-panel w3-light-grey">
+      <a id="ad-image-link" href="index.html"><img id="ad-image" src="assets/ads/sneakers.jpg" width="100%"></a>
+    </div>
+    <h1 class="w3-large w3-center franklin">Oxford Dress Sneakers<br>
+      <a id="ad-text-link" href="" class="w3-text-blue w3-medium fas fa-globe">  go to link</a>
+      <span class="w3-right fas fa-eye"> 310</span>
+
+    </h1>
+  </div>
+  
+  <br>
+  
+   <!-- ================ADVERTISING BLOCK====================== -->
+  <div style="width:100vw;" class="w3-container w3-border-green w3-section w3-card-4 w3-topbar w3-bottombar">
+    <div style="min-height:150px;"class="w3-panel w3-light-grey">
+      <a id="ad-image-link" href="index.html"><img id="ad-image" src="assets/ads/hoodie.jpg" width="100%"></a>
+    </div>
+    <h1 class="w3-large w3-center franklin">Louise Vuitton Winter Hoods<br>
+      <a id="ad-text-link" href="" class="w3-text-blue w3-medium fas fa-globe">  go to link</a>
+      <span class="w3-right fas fa-eye"> 247</span>
+    </h1>
+  </div>
+ 
+</body>
+  
+  <script src="scripts/JQuery.js"></script>
+<script>
+  $(document).ready(()=>{
+ 
+    
+  });
+//////////////////////////////////////////////////////////////////////
+//Functions to handle copying of text to clipboard(tested and working)
+function handleCopy(id) {
+  const area = getElem(id)
+  area.select();
+  document.execCommand('copy')
+}
+
+function triggerCopy(id) {
+  const element = getElem(id);
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+}
+
+/////////////////////////////////////////////////////////////////
+
+</script>
+
+</html>

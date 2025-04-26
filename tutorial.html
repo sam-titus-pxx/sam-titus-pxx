@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/font-styles.css"/>
+  <link rel="stylesheet" href="styles/w3css.css"/>
+  <link rel="stylesheet" href="styles/FA5/fa5/css/all.css"/>
+  <title>Reference Web Page</title>
+</head>
+<body class="w3-margin">
+  
+  <div style="display:none;" class="w3-modal w3-grey">
+    <div class="w3-modal-content w3-white w3-border-black w3-bottombar w3-topbar w3-leftbar">
+      <div class="w3-container ">
+        <h1 class="w3-xlarge">Modal</h1>
+      </div>
+    </div>
+  </div>
+  
+    
+      <h1 class="bold underline">Tutorial #1-a:<br>How To Create An Image Box Container</h1>
+      
+      <div class="w3-border w3-green box-lg"> 
+        <img src="assets/xyz_poster.jpg" height="100%" width="100%"> </div>
+      
+  
+  <p>
+  <span class="w3-xlarge bold">1• Create The Box Tag: </span>
+    <pre class="w3-large bold w3-grey"><code>
+      &lt;div style="" class=""&gt;
+      &lt;/div&gt;
+</code></pre>
+  </p>
+  
+  <p class="w3-container">
+  <span class="w3-xlarge bold">2• Size The Box: </span>
+    <pre class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="height:250px; width:250px;" 
+      class=""&gt;
+      &lt;/div&gt;
+</code></pre>
+  </p>
+  
+   
+  
+   <p class="w3-container">
+  <span class="w3-xlarge bold">3• Put Image Inside The Box: </span>
+    <pre class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="height:250px; width:250px;" 
+      class=""&gt;
+      
+      &lt;img src="assets/poster.jpg"&gt;
+      
+      &lt;/div&gt;
+</code></pre>
+  </p>
+  
+  
+  <p class="w3-container">
+  <span class="w3-xlarge bold">4• Size Image To Fit Inside The Box: </span>
+    <pre class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="height:250px; width:250px;" 
+      class=""&gt;
+      
+      &lt;img src="assets/poster.jpg" 
+      height="100%" width="100%"&gt;
+      
+      &lt;/div&gt;
+</code></pre>
+  </p>
+  
+</body>
+  
+  <script src="scripts/JQuery.js"></script>
+<script src="scripts/lib.js"></script>
+<script>
+  $(document).ready(()=>{
+    
+    
+ 
+    
+  });
+//////////////////////////////////////////////////////////////////////
+//Functions to handle copying of text to clipboard(tested and working)
+function handleCopy(id) {
+  const area = getElem(id)
+  area.select();
+  document.execCommand('copy')
+}
+
+function triggerCopy(id) {
+  const element = getElem(id);
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+}
+
+/////////////////////////////////////////////////////////////////
+
+</script>
+
+</html>

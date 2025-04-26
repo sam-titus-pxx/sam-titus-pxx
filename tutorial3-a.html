@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/font-styles.css"/>
+  <link rel="stylesheet" href="styles/w3css.css"/>
+  <link rel="stylesheet" href="styles/FA5/fa5/css/all.css"/>
+  <title>Reference Web Page</title>
+</head>
+<body class="w3-margin">
+  
+  <div style="display:none;" class="w3-modal w3-grey">
+    <div class="w3-modal-content w3-white w3-border-black w3-bottombar w3-topbar w3-leftbar">
+      <div class="w3-container ">
+        <h1 class="w3-xlarge">Modal</h1>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ==================================================== -->
+  
+  <div class="hide">
+  <h1 class="bold underline">Tutorial #3:<br>How To Create A Card-Box Container</h1>
+  
+  <br>
+  
+  <div style="margin-bottom:20%;padding:0;margin:0;">
+    
+    <div style="height:250px;width:100vw;padding:0;" class="w3-container w3-cell w3-card-4 w3-border">
+      <h1>My Card Box</h1>
+    </div>
+    
+  </div>
+      
+  <br><br>
+  
+  
+  <div style="margin:0;padding:0;" class="w3-container">
+  <p>
+  <span class="w3-xlarge bold">1• Set The Div Element: </span>
+    <span class="bold">Every Card Box Must Be Created Using The Div Element</span>
+    <pre class="w3-large bold w3-grey"><code>
+      &lt;div style="" class=""&gt;
+      &lt;/div&gt;
+</code></pre>
+  </p>
+  
+  <p class="w3-container">
+  <span class="w3-xlarge bold">2• Set The Card Box Specificities:</span><br>
+    <span class="bold">class="w3-container w3-cell w3-card"</span>
+    <pre class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="" 
+      class="w3-container w3-cell 
+      w3-card"&gt;
+      &lt;/div&gt;
+</code></pre>
+  </p>
+  
+    <br><br>
+   
+     <p class="w3-container">
+  <span class="w3-xlarge bold">3• Set The Styling For Height and Width of The Card Box </span><br>
+    <span class="bold">style="height:250px; width:100vw; padding:0;"</span>
+    <pre class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="height:250px; width:100vw; 
+      padding:0;" 
+      class="w3-container w3-cell 
+      w3-card"&gt;
+      &lt;/div&gt;
+</code></pre>
+  </p>
+    
+    
+    <p class="w3-container">
+  <span class="w3-xlarge bold">3A• We Can Also Define A Border Outline For The Box </span><br>
+    <span class="bold">class=".... w3-border"</span>
+    <pre style="" class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="height:250px; width:100vw; 
+      padding:0;" 
+      class="w3-container w3-cell 
+      w3-card w3-border"&gt;
+      &lt;/div&gt;
+</code></pre>
+  </p>
+    
+    <br><br>
+  
+   <p class="w3-container">
+  <span class="w3-xlarge bold">4• Put A Text Inside The Box: </span>
+    <pre class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="height:250px; width:100vw; 
+      padding:0;" 
+      class="w3-container w3-cell 
+      w3-card w3-border"&gt;
+      
+      &lt;h1&gt; My Card Box &lt;/h1&gt;
+      
+      &lt;/div&gt;
+</code></pre>
+  </p>
+    
+    
+    <p class="bold w3-xlarge">Expected Output:
+      <div style="height:250px;width:100vw;padding:0;" class="w3-container w3-cell w3-card-4 w3-border">
+      <h1>My Card Box</h1>
+    </div>
+    </p>
+  </div>
+  </div>
+  <!--==========[================================== --><!--==========[================================== -->
+    
+  <div style="padding:0;" class="w3-container ">
+      <h1 class="bold underline">Tutorial #3-A:<br>How To Create A Multi-Layered Card-Box Container</h1>
+      
+       <div style="l:300px;width:100vw;padding:0;" class="w3-container w3-cell w3-card-4 w3-border">
+      <div style="height:50%;width:100%;padding:0;" class="w3-container w3-cell-row w3-blue w3-small">
+        <h1>1st Row 1st Column</h1>
+      </div>
+      <div style="l:50%;padding:0;" class="w3-container w3-cell-row w3-black">
+        <h1>2nd Row 1st Column</h1>
+      </div>
+    </div>
+      
+  <br><br>
+    <h1>STEP 1: Creating A Row Container</h1>
+  <p>
+  <span class="w3-xlarge bold">1• Inside The Main Holding Container, Create Another Box Card: </span>
+    
+    <pre style="" class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="height:250px; width:100vw; 
+      padding:0;" 
+      class="w3-container w3-cell 
+      w3-card w3-border"&gt;
+      
+      &lt;div style="" class=""&gt; &lt;/div&gt;
+      
+      &lt;/div&gt;
+</code></pre>
+  </p>
+  
+  <p class="w3-container">
+  <span class="w3-xlarge bold">2• Set The Specificities of The Second Card Box: </span><br>
+    <span class="bold">class="w3-container w3-cell-row w3-blue"</span>
+    <pre style="" class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="height:250px; width:100vw; 
+      padding:0;" 
+      class="w3-container w3-cell 
+      w3-card w3-border"&gt;
+      
+      &lt;div style="" class="w3-container 
+      w3-cell-row w3-blue"&gt; &lt;/div&gt;
+      
+      &lt;/div&gt;
+</code></pre>
+  </p>
+  
+    <br><br>
+  
+   <p class="w3-container">
+  <span class="w3-xlarge bold">3• Set The Styling of The Second Card Box: </span><br>
+     <span class="bold">style="width:100%;"</span>
+    <pre style="" class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="height:250px; width:100vw; 
+      padding:0;" 
+      class="w3-container w3-cell 
+      w3-card w3-border"&gt;
+      
+      &lt;div style="width:100%;"
+      class="w3-container 
+      w3-cell-row w3-blue"&gt; &lt;/div&gt;
+      
+      &lt;/div&gt;
+</code></pre>
+  </p>
+  
+    <br><br>
+  
+  <p class="w3-container">
+ <span class="w3-xlarge bold">4• Create Another Child Card Box Inside The Main Holding Container: </span><br>
+    <span class="bold">Set Its Color To Black</span>
+    <pre style="" class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="height:250px; width:100vw; 
+      padding:0;" 
+      class="w3-container w3-cell 
+      w3-card w3-border"&gt;
+      
+      &lt;div style="width:100%;"
+      class="w3-container 
+      w3-cell-row w3-blue"&gt; &lt;/div&gt;
+      
+      &lt;div style="width:100%;"
+      class="w3-container 
+      w3-cell-row w3-black"&gt; &lt;/div&gt;
+      
+      &lt;/div&gt;
+</code></pre>
+  </p>
+    
+    <br><br>
+    
+    <p class="w3-container">
+ <span class="w3-xlarge bold">5• Add Text To The Card Boxes: </span><br>
+   
+    <pre style="" class="w3-medium bold w3-grey"><code>
+      &lt;div 
+      style="height:250px; width:100vw; 
+      padding:0;" 
+      class="w3-container w3-cell 
+      w3-card w3-border"&gt;
+      
+      &lt;div style="width:100%;"
+      class="w3-container 
+      w3-cell-row w3-blue"&gt; 
+         &lt;h1&gt;1st Row Box&lt;/h1&gt;
+      &lt;/div&gt;
+      
+      &lt;div style="width:100%;"
+      class="w3-container 
+      w3-cell-row w3-black"&gt;
+         &lt;h1&gt;2nd Row Box&lt;/h1&gt;
+      &lt;/div&gt;
+      
+      &lt;/div&gt;
+</code></pre>
+  </p>
+    
+    <br>
+    
+     <p class="w3-container">
+  <span class="w3-xxlarge bold">• Expected Output </span>
+     <div style="l:300px;width:100vw;padding:0;" class="w3-container w3-cell w3-card-4 w3-border">
+      <div style="height:50%;width:100%;padding:0;" class="w3-container w3-cell-row w3-blue w3-small">
+        <h1>1st Row Box </h1>
+      </div>
+      <div style="l:50%;padding:0;" class="w3-container w3-cell-row w3-black">
+        <h1>2nd Row Box</h1>
+      </div>
+    </div>
+  </p>
+    
+    <br><br>
+    
+  </div>
+  
+  
+</body>
+  
+  <script src="scripts/JQuery.js"></script>
+<script src="scripts/lib.js"></script>
+<script>
+  $(document).ready(()=>{
+    
+    
+ 
+    
+  });
+//////////////////////////////////////////////////////////////////////
+//Functions to handle copying of text to clipboard(tested and working)
+function handleCopy(id) {
+  const area = getElem(id)
+  area.select();
+  document.execCommand('copy')
+}
+
+function triggerCopy(id) {
+  const element = getElem(id);
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+}
+
+/////////////////////////////////////////////////////////////////
+
+</script>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/font-styles.css"/>
+  <link rel="stylesheet" href="styles/w3css.css"/>
+  <link rel="stylesheet" href="styles/FA5/fa5/css/all.css"/>
+  <title>Reference Web Page</title>
+</head>
+<body class="w3-margin">
+  
+  <div style="display:none;" class="w3-modal w3-grey">
+    <div class="w3-modal-content w3-white w3-border-black w3-bottombar w3-topbar w3-leftbar">
+      <div class="w3-container ">
+        <h1 class="w3-xlarge">Modal</h1>
+      </div>
+    </div>
+  </div>
+  
+    
+      <h1 class="bold underline">Tutorial #2-B:<br>How To Create Web Links Using Icons</h1>
+  <br>
+      <div class="w3-border w3-large bold pd-bg w3-light-grey w3-card-4">
+        Follow us on all our social media platforms <br><br>
+        
+        <span class="w3-border pd-sm w3-round-large fab fa-facebook w3-blue">
+          <a href="www.facebook.com" class="">facebook</a>        
+        </span>
+        <span class="w3-border pd-sm w3-round-large fab fa-twitter w3-black">
+          <a href="www.twitter.com" class="">twitter</a>        
+        </span>
+        <span class="w3-border pd-sm w3-round-large fab fa-instagram w3-red">
+          <a href="www.instagram.com" class="">instagram</a>        
+        </span>
+        
+      </div>
+  
+  <br><br>    
+  
+  
+  <p class="container">
+  <span class="w3-xlarge bold">1• Create A Span Tag: </span>
+    <pre class="w3-large bold w3-grey"><code>
+      &lt;span class=""&gt;
+      &lt;/span&gt;
+</code></pre>
+  </p>
+  
+  <p class="container">
+  <span class="w3-xlarge bold">2• Set Span Style Specificity: </span><br>
+    • Setting color and inner padding
+    <pre class="w3-medium bold w3-grey"><code>
+      &lt;span class="w3-blue pd-sm"&gt;
+      &lt;/span&gt;
+</code></pre>
+  </p>
+  
+  
+  <p class="container">
+  <span class="w3-xlarge bold">3• Include The FA5 Icon Of Choice: </span><br>
+    • For facebook icon: <b>fab fa-facebook</b>
+    <pre class="w3-medium bold w3-grey"><code>
+     &lt;span class="w3-blue pd-sm
+      fab fa-facebook"&gt;
+      &lt;/span&gt;
+</code></pre>
+    • For twitter icon: <b>fab fa-twitter</b><br>
+    • For instagram icon: <b>fab fa-instagram</b><br>
+    • For whatsapp icon: <b>fab fa-whatsapp</b><br>
+    • For telegram icon: <b>fab fa-telegram</b>
+    
+  </p>
+  
+  
+  <p class="container">
+  <span class="w3-xlarge bold">4• Create The Link Tag Inside Span: </span>
+    <pre class="w3-medium bold w3-grey"><code>
+      &lt;span class="w3-blue pd-sm
+      fab fa-facebook"&gt;
+      
+      &lt;a href=""&gt;
+      &lt;/a&gt;
+      
+      &lt;/span&gt;
+</code></pre>
+  </p>
+  
+  <p class="w3-container">
+  <span class="w3-xlarge bold">5• Specify The Target URL: </span><br>
+    <pre class="w3-medium bold w3-grey"><code>
+     &lt;span class="w3-blue pd-sm
+      fab fa-facebook"&gt;
+      
+      &lt;a href="www.facebook.com"&gt;
+      &lt;/a&gt;
+      
+      &lt;/span&gt;
+</code></pre>
+  
+  
+   <p class="w3-container">
+  <span class="w3-xlarge bold">6• Put A Text Inside The Link Tag: </span>
+    <pre class="w3-medium bold w3-grey"><code>
+      &lt;span class="w3-blue pd-sm
+      fab fa-facebook"&gt;
+      
+      &lt;a href="www.facebook.com"&gt;
+      facebook
+      &lt;/a&gt;
+      
+      &lt;/span&gt;
+</code></pre>
+  </p>
+    
+  
+  <p class="w3-container">
+  <span class="w3-xlarge bold">7• Final Result: </span><br>
+    <br>
+    Click on the link below to visit our Facebook page<br>
+       <span class="w3-large w3-border w3-section pd-sm w3-round-large fab fa-facebook w3-blue">
+          <a href="www.facebook.com" class="">facebook</a>        
+        </span>
+    
+  </p>
+  <br>
+  <br>
+  
+</body>
+  
+  <script src="scripts/JQuery.js"></script>
+<script src="scripts/lib.js"></script>
+<script>
+  $(document).ready(()=>{
+    
+    
+ 
+    
+  });
+//////////////////////////////////////////////////////////////////////
+//Functions to handle copying of text to clipboard(tested and working)
+function handleCopy(id) {
+  const area = getElem(id)
+  area.select();
+  document.execCommand('copy')
+}
+
+function triggerCopy(id) {
+  const element = getElem(id);
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+}
+
+/////////////////////////////////////////////////////////////////
+
+</script>
+
+</html>
