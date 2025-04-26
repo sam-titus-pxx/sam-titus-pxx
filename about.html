@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/font-styles.css"/>
+  <link rel="stylesheet" href="styles/w3css.css"/>
+  <link rel="stylesheet" href="styles/FA5/fa5/css/all.css"/>
+  <title>About Page</title>
+</head>
+<body>
+  
+  <div style="display:none;" class="w3-modal w3-grey">
+    <div class="w3-modal-content w3-white w3-border-black w3-bottombar w3-topbar w3-leftbar">
+      <div class="w3-container ">
+        <h1 class="w3-xlarge">Modal</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div style="height:100px;margin:0;padding:0;" class="w3-container w3-white ">
+      <img style="margin:0;" src="assets/TSF_logo.png" height="100px" width="100%" class="w3-left ">
+    </div>
+  
+  
+  <div class="w3-container">
+    <div class="w3-container w3-card-4 w3-section">
+      <h1 class="w3-center w3-xlarge underline bold josefinB">About The Author</h1>
+      <img class="w3-round-xxlarge" src="assets/developer.jpg" height="80px" width="80px">
+      <h1 class="w3-large bold ">Fatherly P. Titus</h1>
+      <h1 class="w3-small"><span class="fas fa-user"></span> Chemical Engineer <br>
+        <span class="fas fa-home"></span> Uyo, Akwa Ibom State, Nigeria
+      </h1>
+      <hr>
+      <p class="poppins w3-medium"> <b>Fatherly Titus</b> is a medium-scale student farmer based in the heart of Uyo Metropolis, Akwa Ibom State.<br><br>
+        He is currently in the university doing a 5-years course in Chemical and Process Engineering at the University of Uyo, Akwa Ibom State.<br><br>
+        He has 5+ years experience in farming and agro-production in the tropical South-South region of Nigeria where he engages in cultivating crops that are native and indigenous to the geopolitical area.<br><br>
+        He specializes in growing Corn, Peppers, Cassava, Fluted Pumpkin (Vegetable), Sweet Potatoes, Spice Herbs (Scent Leaf and Curry), and Bitter Leaf.
+      </p>
+    </div>
+ </div>
+ 
+</body>
+  
+  <script src="scripts/JQuery.js"></script>
+<script>
+  $(document).ready(()=>{
+ 
+    
+  });
+//////////////////////////////////////////////////////////////////////
+//Functions to handle copying of text to clipboard(tested and working)
+function handleCopy(id) {
+  const area = getElem(id)
+  area.select();
+  document.execCommand('copy')
+}
+
+function triggerCopy(id) {
+  const element = getElem(id);
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+}
+
+/////////////////////////////////////////////////////////////////
+
+</script>
+
+</html>
